@@ -1,0 +1,80 @@
+[{
+	"ProductID": 1,
+	"ProductName": "ProductName 1",
+	"CategoryID": 1,
+	"QuantityPerUnit": "QuantityPerUnit 1",
+	"UnitPrice": 6043.81,
+	"UnitsInStock": 1898,
+	"UnitsOnOrder": 1082,
+	"ReorderLevel": 6618,
+	"Discontinued": true,
+	"__metadata":{
+		"uri":"Products(1)",
+		"type":"NortwindModel.Product"
+	},
+	"Category":{
+		"__deffered":{
+			"uri":"Products(1)/Category"
+		}
+	}
+},
+{
+	"ProductID": 2,
+	"ProductName": "ProductName 2",
+	"CategoryID": 2,
+	"QuantityPerUnit": "QuantityPerUnit 2",
+	"UnitPrice": 100.2,
+	"UnitsInStock": 1112,
+	"UnitsOnOrder": 143,
+	"ReorderLevel": 1003,
+	"Discontinued": true,
+	"__metadata":{
+		"uri":"Products(2)",
+		"type":"NortwindModel.Product"
+	},
+	"Category":{
+		"__deffered":{
+			"uri":"Products(2)/Category"
+		}
+	}
+},{
+	"ProductID": 3,
+	"ProductName": "ProductName 3",
+	"CategoryID": 3,
+	"QuantityPerUnit": "QuantityPerUnit 3",
+	"UnitPrice": 123.23,
+	"UnitsInStock": 1432,
+	"UnitsOnOrder": 543,
+	"ReorderLevel": 100,
+	"Discontinued": false,
+	"__metadata":{
+		"uri":"Products(3)",
+		"type":"NortwindModel.Product"
+	},
+	"Category":{
+		"__deffered":{
+			"uri":"Products(3)/Category"
+		}
+	}
+},
+{
+	"ProductID": 4,
+	"ProductName": "ProductName 4",
+	"CategoryID": 2,
+	"QuantityPerUnit": "QuantityPerUnit 4",
+	"UnitPrice": 450,
+	"UnitsInStock": 450,
+	"UnitsOnOrder": 343,
+	"ReorderLevel": 12,
+	"Discontinued": false,
+	"__metadata":{
+		"uri":"Products(4)",
+		"type":"NortwindModel.Product"
+	},
+	"Category":{
+		"__deffered":{
+			"uri":"Products(4)/Category"
+		}
+	}
+}
+]

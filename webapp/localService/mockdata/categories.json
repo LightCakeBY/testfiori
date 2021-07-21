@@ -1,0 +1,91 @@
+[{
+	"CategoryID": 1,
+	"CategoryName": "Food",
+	"Description": "Description 1",
+	"Picture": "1110010101",
+	"Image": " ../images/image.svg",
+	"StatusID": 1,
+	"ResponsibleID": 1,
+	"ProductAvailability": 9.85,
+	"ProductAvailabilityState": "State 1",
+	"ProductTotal": "500",
+	"__metadata":{
+		"uri":"Categories(1)",
+		"type":"NortwindModel.Category"
+	},
+	"Products":{
+		"__deffered":{
+			"uri":"Categories(1)/Products"
+		}
+	},
+	"Statuses":{
+		"__deffered":{
+			"uri":"Categories(1)/Statuses"
+		}
+	},
+	"Responsibles":{
+		"__deffered":{
+			"uri":"Categories(1)/Responsibles"
+		}
+	}
+}, {
+	"CategoryID": 2,
+	"CategoryName": "Devices",
+	"Description": "Description 2",
+	"Picture": "1110010101",
+	"Image": " ../images/image.svg",
+	"StatusID": 2,
+	"ResponsibleID": 1,
+	"ProductAvailability": 416.31,
+	"ProductAvailabilityState": "State 2",
+	"ProductTotal": "100",
+	"__metadata":{
+		"uri":"Categories(2)",
+		"type":"NortwindModel.Category"
+	},
+	"Products":{
+		"__deffered":{
+			"uri":"Categories(2)/Products"
+		}
+	},
+	"Statuses":{
+		"__deffered":{
+			"uri":"Categories(2)/Statuses"
+		}
+	},
+	"Responsibles":{
+		"__deffered":{
+			"uri":"Categories(2)/Responsibles"
+		}
+	}
+}, {
+	"CategoryID": 3,
+	"CategoryName": "Cars",
+	"Description": "Description 3",
+	"Picture": "1110010101",
+	"Image": " ../images/image.svg",
+	"StatusID": 3,
+	"ResponsibleID": 2,
+	"ProductAvailability": 212.1,
+	"ProductAvailabilityState": "State 2",
+	"ProductTotal": "300",
+	"__metadata":{
+		"uri":"Categories(3)",
+		"type":"NortwindModel.Category"
+	},
+	"Products":{
+		"__deffered":{
+			"uri":"Categories(3)/Products"
+		}
+	},
+	"Statuses":{
+		"__deffered":{
+			"uri":"Categories(3)/Statuses"
+		}
+	},
+	"Responsibles":{
+		"__deffered":{
+			"uri":"Categories(3)/Responsibles"
+		}
+	}
+}]
