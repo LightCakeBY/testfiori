@@ -1,80 +1,132 @@
 [{
 	"ProductID": 1,
-	"ProductName": "ProductName 1",
+	"ProductName": "Apple",
 	"CategoryID": 1,
-	"QuantityPerUnit": "QuantityPerUnit 1",
-	"UnitPrice": 6043.81,
+	"QuantityPerUnit": "Quan1",
+	"UnitPrice": 6.81,
 	"UnitsInStock": 1898,
-	"UnitsOnOrder": 1082,
-	"ReorderLevel": 6618,
-	"Discontinued": true,
-	"__metadata":{
-		"uri":"Products(1)",
-		"type":"NortwindModel.Product"
-	},
-	"Category":{
-		"__deffered":{
-			"uri":"Products(1)/Category"
-		}
-	}
+	"UnitsOnOrder": 15,
+	"ReorderLevel": 80,
+	"Discontinued": true
 },
 {
 	"ProductID": 2,
-	"ProductName": "ProductName 2",
+	"ProductName": "Laptop",
 	"CategoryID": 2,
-	"QuantityPerUnit": "QuantityPerUnit 2",
+	"QuantityPerUnit": "Quan2",
 	"UnitPrice": 100.2,
 	"UnitsInStock": 1112,
 	"UnitsOnOrder": 143,
 	"ReorderLevel": 1003,
-	"Discontinued": true,
-	"__metadata":{
-		"uri":"Products(2)",
-		"type":"NortwindModel.Product"
-	},
-	"Category":{
-		"__deffered":{
-			"uri":"Products(2)/Category"
-		}
-	}
+	"Discontinued": true
 },{
 	"ProductID": 3,
-	"ProductName": "ProductName 3",
+	"ProductName": "Audi",
 	"CategoryID": 3,
-	"QuantityPerUnit": "QuantityPerUnit 3",
-	"UnitPrice": 123.23,
+	"QuantityPerUnit": "Quan3",
+	"UnitPrice": 2123.23,
 	"UnitsInStock": 1432,
 	"UnitsOnOrder": 543,
 	"ReorderLevel": 100,
-	"Discontinued": false,
-	"__metadata":{
-		"uri":"Products(3)",
-		"type":"NortwindModel.Product"
-	},
-	"Category":{
-		"__deffered":{
-			"uri":"Products(3)/Category"
-		}
-	}
+	"Discontinued": false
 },
 {
 	"ProductID": 4,
-	"ProductName": "ProductName 4",
+	"ProductName": "Phone",
 	"CategoryID": 2,
-	"QuantityPerUnit": "QuantityPerUnit 4",
-	"UnitPrice": 450,
+	"QuantityPerUnit": "Quan4",
+	"UnitPrice": 450.10,
 	"UnitsInStock": 450,
 	"UnitsOnOrder": 343,
 	"ReorderLevel": 12,
-	"Discontinued": false,
-	"__metadata":{
-		"uri":"Products(4)",
-		"type":"NortwindModel.Product"
-	},
-	"Category":{
-		"__deffered":{
-			"uri":"Products(4)/Category"
-		}
-	}
+	"Discontinued": false
+},
+{
+	"ProductID": 5,
+	"ProductName": "Watch",
+	"CategoryID": 2,
+	"QuantityPerUnit": "Quan5",
+	"UnitPrice": 200.0,
+	"UnitsInStock": 100,
+	"UnitsOnOrder": 10,
+	"ReorderLevel": 7,
+	"Discontinued": false
+},
+{
+	"ProductID": 6,
+	"ProductName": "Pizza",
+	"CategoryID": 1,
+	"QuantityPerUnit": "Quan6",
+	"UnitPrice": 10.10,
+	"UnitsInStock": 1,
+	"UnitsOnOrder": 3,
+	"ReorderLevel": 50,
+	"Discontinued": false
+},
+{
+	"ProductID": 7,
+	"ProductName": "Volkswagen",
+	"CategoryID": 3,
+	"QuantityPerUnit": "Quan7",
+	"UnitPrice": 1450.20,
+	"UnitsInStock": 19,
+	"UnitsOnOrder": 1,
+	"ReorderLevel": 3,
+	"Discontinued": false
+},
+{
+	"ProductID": 8,
+	"ProductName": "Orange",
+	"CategoryID": 1,
+	"QuantityPerUnit": "Quan8",
+	"UnitPrice": 30.15,
+	"UnitsInStock": 490,
+	"UnitsOnOrder": 20,
+	"ReorderLevel": 12,
+	"Discontinued": false
+},
+{
+	"ProductID": 9,
+	"ProductName": "Lexus",
+	"CategoryID": 3,
+	"QuantityPerUnit": "Quan9",
+	"UnitPrice": 2450.10,
+	"UnitsInStock": 46,
+	"UnitsOnOrder": 1,
+	"ReorderLevel": 5,
+	"Discontinued": false
+},
+{
+	"ProductID": 10,
+	"ProductName": "Banana",
+	"CategoryID": 4,
+	"QuantityPerUnit": "Quan10",
+	"UnitPrice": 50.00,
+	"UnitsInStock": 699,
+	"UnitsOnOrder": 7,
+	"ReorderLevel": 12,
+	"Discontinued": false
+},
+{
+	"ProductID": 11,
+	"ProductName": "Earphones",
+	"CategoryID": 2,
+	"QuantityPerUnit": "Quan11",
+	"UnitPrice": 350.10,
+	"UnitsInStock": 234,
+	"UnitsOnOrder": 2,
+	"ReorderLevel": 17,
+	"Discontinued": false
+},
+{
+	"ProductID": 12,
+	"ProductName": "Coffee",
+	"CategoryID": 1,
+	"QuantityPerUnit": "Quan12",
+	"UnitPrice": 35.15,
+	"UnitsInStock": 670,
+	"UnitsOnOrder": 3,
+	"ReorderLevel": 16,
+	"Discontinued": false
 }
 ]

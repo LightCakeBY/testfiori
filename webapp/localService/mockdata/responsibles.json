@@ -1,20 +1,18 @@
 [{
 	"ResponsibleID": 1,
 	"FirstName": "Petya",
-	"SurName": "Petrov",
-	"MiddleName": "Pavlovich",
-	"__metadata": {
-		"uri": "Responsibles(1)",
-		"type": "NorthwindModel.Responsible"
-	}
+	"SurName": "Ivanov",
+	"MiddleName": "Alexeevich"
 },
 {
 	"ResponsibleID": 2,
-	"FirstName": "Vasya",
+	"FirstName": "Mark",
 	"SurName": "Vasilev",
-	"MiddleName": "Vasilevich",
-	"__metadata": {
-		"uri": "Responsibles(2)",
-		"type": "NorthwindModel.Responsible"
-	}
+	"MiddleName": "Nikolaevich"
+},
+{
+	"ResponsibleID": 3,
+	"FirstName": "Olga",
+	"SurName": "Burak",
+	"MiddleName": "Konstantinovna"
 }]
