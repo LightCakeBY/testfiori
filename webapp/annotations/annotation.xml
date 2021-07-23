@@ -1,6 +1,6 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/HTML5.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
     </edmx:Reference>
     <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
         <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
@@ -17,9 +17,8 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+
             <Annotations Target="ODataWeb.Northwind.Model.NorthwindEntities/Categories">
-                
-                            
                 <Annotation Term="Capabilities.SearchRestrictions">
                     <Record Type="Capabilities.SearchRestrictionsType">
                         <PropertyValue Property="Searchable" Bool="false"/>
@@ -36,7 +35,7 @@
                     </Record>
                 </Annotation>
             </Annotations>
-            
+
             <Annotations Target="NorthwindModel.Category/StatusID">
                 <Annotation Term="Common.Label" String="{@i18n>filterByStatus}"/>
                 <Annotation Term="Common.Text" Path="Statuses/StatusName"/>
@@ -71,7 +70,6 @@
 								<Record Type="Common.ValueListParameterInOut">
 									<PropertyValue Property="LocalDataProperty" PropertyPath="ResponsibleID"/>
 									<PropertyValue Property="ValueListProperty" String="ResponsibleID"/>
-
 								</Record>
 								<Record Type="Common.ValueListParameterDisplayOnly">
 									<PropertyValue Property="ValueListProperty" String="FirstName"/>
@@ -92,20 +90,49 @@
                 <Annotation Term="Common.Text" Path="CategoryName"/>
             </Annotations>
 
-            <Annotations Target="NorthwindModel.Category">
-                
+            <Annotation Term="Common.SemanticKey" >
+                <Collection>
+                    <PropertyPath>CategoryID</PropertyPath>
+                </Collection>
+            </Annotation>
+
+            <Annotations Target="NorthwindModel.Category">        
                 <Annotation Term="UI.HeaderInfo" >
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="TypeName" String="{@i18n>category}"/>
                         <PropertyValue Property="TypeNamePlural" String="{@i18n>categories}"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="CategoryName"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="Description"/>
+                            </Record>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="Common.SemanticKey" >
+               
+                <Annotation Term="UI.DataPoint" Qualifier="StatusQty">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="Statuses/StatusName"/>
+                        <PropertyValue Property="Title" String="{@i18n>status:}"/>
+                        <Annotation Term="Common.Label" String="{@i18n>status}"/>
+                    </Record>
+                </Annotation>
+
+                <Annotation Term="UI.HeaderFacets">
                     <Collection>
-                        <PropertyPath>CategoryID</PropertyPath>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="{@i18n>filterByStatus}"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#StatusQty"/>
+                        </Record>
                     </Collection>
                 </Annotation>
+                
             </Annotations>
+
             <Annotations Target="NorthwindModel.Category">
                 <Annotation Term="UI.DataPoint" Qualifier="AvailabilityQty">
                     <Record Type="UI.DataPointType">
@@ -119,6 +146,7 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+
                 <Annotation Term="UI.Chart" Qualifier="AvailabilityQty">
                     <Record Type="UI.ChartDefinitionType">
                         <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bullet"/>
@@ -136,12 +164,14 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+
                 <Annotation Term="UI.SelectionFields" >
                     <Collection>
                         <PropertyPath>StatusID</PropertyPath>
                         <PropertyPath>ResponsibleID</PropertyPath>
                     </Collection>
                 </Annotation>
+
                 <Annotation Term="UI.LineItem" >
                     <Collection>
                         <Record Type="UI.DataField">
@@ -166,7 +196,9 @@
                         </Record>
                     </Collection>
                 </Annotation>
+
             </Annotations>
+            
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
