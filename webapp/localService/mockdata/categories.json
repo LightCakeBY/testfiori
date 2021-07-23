@@ -4,19 +4,22 @@
 	"Description": "Categories for Food",
 	"Picture": "1110010101",
 	"StatusID": 1,
-	"ResponsibleID": 1
+	"ResponsibleID": 1,
+	"TotalProducts": 4
 }, {
 	"CategoryID": 2,
 	"CategoryName": "Devices",
 	"Description": "Categories for Devices",
 	"Picture": "1110010101",
 	"StatusID": 2,
-	"ResponsibleID": 1
+	"ResponsibleID": 1,
+	"TotalProducts": 4
 }, {
 	"CategoryID": 3,
 	"CategoryName": "Cars",
 	"Description": "Categories for Cars",
 	"Picture": "1110010101",
 	"StatusID": 3,
-	"ResponsibleID": 2
+	"ResponsibleID": 2,
+	"TotalProducts": 3
 }]

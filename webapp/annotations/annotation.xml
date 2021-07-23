@@ -8,24 +8,18 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
     </edmx:Reference>
-    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
-    </edmx:Reference>
     <edmx:Reference Uri="/V2/Northwind/Northwind.svc/$metadata">
         <edmx:Include Namespace="ODataWeb.Northwind.Model"/>
         <edmx:Include Namespace="NorthwindModel"/>
-        
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
-
             <Annotations Target="ODataWeb.Northwind.Model.NorthwindEntities/Categories">
                 <Annotation Term="Capabilities.SearchRestrictions">
                     <Record Type="Capabilities.SearchRestrictionsType">
                         <PropertyValue Property="Searchable" Bool="false"/>
                     </Record>
                 </Annotation>
-
                 <Annotation Term="Capabilities.DeleteRestrictions">
                     <Record Type="Capabilities.DeleteRestrictionsType">
                         <PropertyValue Property="Deletable" Bool="false"/>
@@ -37,37 +31,7 @@
                     </Record>
                 </Annotation>
             </Annotations>
-
-            <Annotations Target="NorthwindModel.Category/ResponsibleID">
-                <Annotation Term="Common.Label" String="{@i18n>filterByResponsible}"/>
-                <Annotation Term="Common.ValueList">
-					<Record Type="Common.ValueListType">
-						<PropertyValue Property="CollectionPath" String="Responsibles"/>
-						<PropertyValue Property="Parameters">
-							<Collection>
-								<Record Type="Common.ValueListParameterInOut">
-									<PropertyValue Property="LocalDataProperty" PropertyPath="ResponsibleID"/>
-									<PropertyValue Property="ValueListProperty" String="ResponsibleID"/>
-								</Record>
-								<Record Type="Common.ValueListParameterDisplayOnly">
-									<PropertyValue Property="ValueListProperty" String="FirstName"/>
-								</Record>
-								<Record Type="Common.ValueListParameterDisplayOnly">
-									<PropertyValue Property="ValueListProperty" String="LastName"/>
-								</Record>
-								<Record Type="Common.ValueListParameterDisplayOnly">
-									<PropertyValue Property="ValueListProperty" String="MiddleName"/>
-								</Record>
-							</Collection>
-						</PropertyValue>
-					</Record>
-				</Annotation>
-            </Annotations>
-
-            <Annotations Target="NorthwindModel.Category/CategoryID">
-                <Annotation Term="Common.Text" Path="CategoryName"/>
-            </Annotations>
-
+            
             <Annotations Target="NorthwindModel.Category/StatusID">
                 <Annotation Term="Common.Label" String="{@i18n>filterByStatus}"/>
                 <Annotation Term="Common.Text" Path="Statuses/StatusName"/>
@@ -91,7 +55,39 @@
 				</Annotation>
 			</Annotations>
 
+            <Annotations Target="NorthwindModel.Category/ResponsibleID">
+                <Annotation Term="Common.Label" String="{@i18n>filterByResponsible}"/>
+                <Annotation Term="Common.ValueList">
+					<Record Type="Common.ValueListType">
+						<PropertyValue Property="CollectionPath" String="Responsibles"/>
+						<PropertyValue Property="Parameters">
+							<Collection>
+								<Record Type="Common.ValueListParameterInOut">
+									<PropertyValue Property="LocalDataProperty" PropertyPath="ResponsibleID"/>
+									<PropertyValue Property="ValueListProperty" String="ResponsibleID"/>
+
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="FirstName"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="SurName"/>
+								</Record>
+								<Record Type="Common.ValueListParameterDisplayOnly">
+									<PropertyValue Property="ValueListProperty" String="MiddleName"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+            </Annotations>
+
+            <Annotations Target="NorthwindModel.Category/CategoryID">
+                <Annotation Term="Common.Text" Path="CategoryName"/>
+            </Annotations>
+
             <Annotations Target="NorthwindModel.Category">
+                
                 <Annotation Term="UI.HeaderInfo" >
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="TypeName" String="{@i18n>category}"/>
@@ -104,7 +100,6 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-            
             <Annotations Target="NorthwindModel.Category">
                 <Annotation Term="UI.SelectionFields" >
                     <Collection>
@@ -112,7 +107,6 @@
                         <PropertyPath>ResponsibleID</PropertyPath>
                     </Collection>
                 </Annotation>
-
                 <Annotation Term="UI.LineItem" >
                     <Collection>
                         <Record Type="UI.DataField">
@@ -131,25 +125,17 @@
                             <PropertyValue Property="Value" Path="ResponsibleID"/>
                             <PropertyValue Property="Label" String="{@i18n>responsibleId}"/>
                         </Record>
-
-                        <Record Type="UI.DataFieldWithNavigationPath">
-                            <PropertyValue Property="Target" NavigationPropertyPath="Responsibles"/>
-                            <PropertyValue Property="Value" Path="Responsibles/FirstName"/>
-                            <PropertyValue Property="Label" String="{@i18n>firstName}"/>
-                        </Record>
                         <Record Type="UI.DataFieldWithNavigationPath">
                             <PropertyValue Property="Target" NavigationPropertyPath="Responsibles"/>
                             <PropertyValue Property="Value" Path="Responsibles/SurName"/>
                             <PropertyValue Property="Label" String="{@i18n>lastName}"/>
                         </Record>
-                        <Record Type="UI.DataFieldWithNavigationPath">
-                            <PropertyValue Property="Target" NavigationPropertyPath="Responsibles"/>
-                            <PropertyValue Property="Value" Path="Responsibles/MiddleName"/>
-                            <PropertyValue Property="Label" String="{@i18n>middleName}"/>
-                        </Record>
+                
+                        
                     </Collection>
                 </Annotation>
             </Annotations>
+            
             
         </Schema>
     </edmx:DataServices>

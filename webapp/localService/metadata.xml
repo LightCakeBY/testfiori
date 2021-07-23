@@ -1,6 +1,7 @@
 <edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
     <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
         <Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="NorthwindModel">
+           
             <EntityType Name="Category">
                 <Key>
                     <PropertyRef Name="CategoryID" />
@@ -10,11 +11,13 @@
                 <Property Name="Description" Type="Edm.String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
                 <Property Name="Picture" Type="Edm.Binary" Nullable="true" MaxLength="Max" FixedLength="false" />
                 <Property Name="StatusID" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />
-                <Property Name="ResponsibleID" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />
+                <Property Name="ResponsibleID" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" /> 
+                <Property Name="TotalProducts" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />             
                 <NavigationProperty Name="Statuses" Relationship="NorthwindModel.FK_Statuses_Categories" FromRole="Categories" ToRole="Statuses" />
                 <NavigationProperty Name="Products" Relationship="NorthwindModel.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
                 <NavigationProperty Name="Responsibles" Relationship="NorthwindModel.FK_Responsibles_Categories" FromRole="Categories" ToRole="Responsibles" />
             </EntityType>
+
             <EntityType Name="Product">
                 <Key>
                     <PropertyRef Name="ProductID" />
@@ -29,6 +32,7 @@
                 <Property Name="UnitsOnOrder" Type="Edm.Int16" Nullable="true" />
                 <Property Name="ReorderLevel" Type="Edm.Int16" Nullable="true" />
                 <Property Name="Discontinued" Type="Edm.Boolean" Nullable="false" />
+            
                 <NavigationProperty Name="Category" Relationship="NorthwindModel.FK_Products_Categories" FromRole="Products" ToRole="Categories" />
             </EntityType>
 
