@@ -125,6 +125,26 @@
                         }
                     },
                     "sap.suite.ui.generic.template.ObjectPage.view.Details": {}
+                },
+                "sap.ui.controllerExtensions": {
+                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+                        "controllerName": "testfiori.ext.controller.ObjectPageExt",
+                        "sap.ui.generic.app": {
+                            "Categories": {
+                                "EntitySet": "Categories",
+                                "Header": {
+                                    "Actions": {
+                                        "REPLACE_WITH_ACTION_ID": {
+                                            "id": "REPLACE_WITH_ACTION_IDButton",
+                                            "text": "Alert!",
+                                            "press": "onCustomAction",
+                                            "requiresSelection": false
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -155,6 +175,9 @@
                             "dateSettings": {
                                 "useDateRange": true
                             }
+                        },
+                        "tableSettings": {
+                            "multiSelect": true
                         }
                     }
                 },
