@@ -5,7 +5,9 @@
 	"Picture": "1110010101",
 	"StatusID": 1,
 	"ResponsibleID": 1,
-	"TotalProducts": 4
+	"TotalProducts": 4,
+	"ProductAvailability": 8000,
+	"ProductAvailabilityCritical": 6350
 }, {
 	"CategoryID": 2,
 	"CategoryName": "Devices",
@@ -13,7 +15,9 @@
 	"Picture": "1110010101",
 	"StatusID": 2,
 	"ResponsibleID": 1,
-	"TotalProducts": 4
+	"TotalProducts": 4,
+	"ProductAvailability": 3750,
+	"ProductAvailabilityCritical": 4000
 }, {
 	"CategoryID": 3,
 	"CategoryName": "Cars",
@@ -21,5 +25,7 @@
 	"Picture": "1110010101",
 	"StatusID": 3,
 	"ResponsibleID": 2,
-	"TotalProducts": 3
+	"TotalProducts": 3,
+	"ProductAvailability": 1355,
+	"ProductAvailabilityCritical": 200
 }]

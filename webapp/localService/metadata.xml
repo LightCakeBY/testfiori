@@ -12,7 +12,9 @@
                 <Property Name="Picture" Type="Edm.Binary" Nullable="true" MaxLength="Max" FixedLength="false" />
                 <Property Name="StatusID" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />
                 <Property Name="ResponsibleID" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" /> 
-                <Property Name="TotalProducts" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />             
+                <Property Name="TotalProducts" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" /> 
+                <Property Name="ProductAvailability" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />  
+                <Property Name="ProductAvailabilityCritical" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />          
                 <NavigationProperty Name="Statuses" Relationship="NorthwindModel.FK_Statuses_Categories" FromRole="Categories" ToRole="Statuses" />
                 <NavigationProperty Name="Products" Relationship="NorthwindModel.FK_Products_Categories" FromRole="Categories" ToRole="Products" />
                 <NavigationProperty Name="Responsibles" Relationship="NorthwindModel.FK_Responsibles_Categories" FromRole="Categories" ToRole="Responsibles" />

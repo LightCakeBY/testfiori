@@ -57,6 +57,7 @@
 
             <Annotations Target="NorthwindModel.Category/ResponsibleID">
                 <Annotation Term="Common.Label" String="{@i18n>filterByResponsible}"/>
+                <Annotation Term="Common.Text" Path="Responsibles/SurName"/>
                 <Annotation Term="Common.ValueList">
 					<Record Type="Common.ValueListType">
 						<PropertyValue Property="CollectionPath" String="Responsibles"/>
@@ -101,6 +102,35 @@
                 </Annotation>
             </Annotations>
             <Annotations Target="NorthwindModel.Category">
+                <Annotation Term="UI.DataPoint" Qualifier="AvailabilityQty">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="ProductAvailability"/>
+                        <PropertyValue Property="CriticalityCalculation">
+                            <Record Type="UI.CriticalityCalculationType">
+                                <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Maximize"/>
+                                <PropertyValue Property="DeviationRangeLowValue" Path="ProductAvailabilityCritical"/>
+                                <PropertyValue Property="ToleranceRangeLowValue" Path="ProductAvailabilityCritical"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="AvailabilityQty">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bullet"/>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>ProductAvailability</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="DataPoint" AnnotationPath="@UI.DataPoint#AvailabilityQty"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.SelectionFields" >
                     <Collection>
                         <PropertyPath>StatusID</PropertyPath>
@@ -119,19 +149,16 @@
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="StatusID"/>
-                            <PropertyValue Property="Label" String="{@i18n>statusId}"/>
+                            <PropertyValue Property="Label" String="{@i18n>status}"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="ResponsibleID"/>
-                            <PropertyValue Property="Label" String="{@i18n>responsibleId}"/>
+                            <PropertyValue Property="Label" String="{@i18n>responsible}"/>
                         </Record>
-                        <Record Type="UI.DataFieldWithNavigationPath">
-                            <PropertyValue Property="Target" NavigationPropertyPath="Responsibles"/>
-                            <PropertyValue Property="Value" Path="Responsibles/SurName"/>
-                            <PropertyValue Property="Label" String="{@i18n>lastName}"/>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.Chart#AvailabilityQty"/>
+                            <PropertyValue Property="Label" String="{@i18n>productAvailability}"/>
                         </Record>
-                
-                        
                     </Collection>
                 </Annotation>
             </Annotations>
