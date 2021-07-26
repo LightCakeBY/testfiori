@@ -143,11 +143,18 @@
                                 "EntitySet": "Categories",
                                 "Header": {
                                     "Actions": {
-                                        "REPLACE_WITH_ACTION_ID": {
-                                            "id": "REPLACE_WITH_ACTION_IDButton",
-                                            "text": "Alert!",
-                                            "press": "onCustomAction",
+                                        "DeleteButton": {
+                                            "id": "DeleteButton",
+                                            "text": "Delete btn (say hello)",
+                                            "press": "onDeleteAction",
                                             "requiresSelection": false
+                                        },
+                                        "ActivateButton": {
+                                            "id": "ActivateButton",
+                                            "text": "Activate!",
+                                            "press": "toActiveStatus",
+                                            "requiresSelection": false,
+                                            "determining": true
                                         }
                                     }
                                 }

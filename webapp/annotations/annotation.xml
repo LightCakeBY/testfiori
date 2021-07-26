@@ -209,7 +209,7 @@
 						</PropertyValue>
 					</Record>
 				</Annotation>
-
+            
 				<Annotation Term="UI.Facets">
 					<Collection>
 						<Record Type="UI.ReferenceFacet">
