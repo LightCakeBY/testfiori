@@ -1,7 +1,4 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
-        <edmx:Include Namespace="Org.OData.Core.V1" Alias="Core"/>
-    </edmx:Reference>
     <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Capabilities.V1.xml">
         <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
     </edmx:Reference>
@@ -195,6 +192,7 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.Chart#AvailabilityQty"/>
                             <PropertyValue Property="Label" String="{@i18n>productAvailability}"/>
                         </Record>
+
                     </Collection>
                 </Annotation>
                 
@@ -211,6 +209,7 @@
 						</PropertyValue>
 					</Record>
 				</Annotation>
+
 				<Annotation Term="UI.Facets">
 					<Collection>
 						<Record Type="UI.ReferenceFacet">
@@ -221,6 +220,10 @@
 							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Information"/>
 							<PropertyValue Property="Label" String="{@i18n>information}"/>
 						</Record>
+                        <!-- <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath=""/>
+                            <PropertyValue Property="Label" String="Image Facet"/>
+                        </Record> -->
 					</Collection>
 				</Annotation>
             </Annotations>

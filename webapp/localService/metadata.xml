@@ -10,6 +10,7 @@
                 <Property Name="CategoryName" Type="Edm.String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
                 <Property Name="Description" Type="Edm.String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
                 <Property Name="Picture" Type="Edm.Binary" Nullable="true" MaxLength="Max" FixedLength="false" />
+                <Property Name="Image" Type="Edm.String" Nullable="true" MaxLength="Max" FixedLength="false" />
                 <Property Name="StatusID" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" />
                 <Property Name="ResponsibleID" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" /> 
                 <Property Name="TotalProducts" Type="Edm.Int32" Nullable="true" MaxLength="Max" FixedLength="false" /> 
