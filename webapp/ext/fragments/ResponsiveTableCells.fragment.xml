@@ -2,4 +2,5 @@
     xmlns="sap.m">
 	<!--Column 1 Cell-->
 	<Text text="{TotalProducts}"></Text>
+	<Image src="{Image}" width="45%"/>
 </core:FragmentDefinition>
