@@ -117,7 +117,9 @@
                     <End Role="Categories" EntitySet="Categories" />
                     <End Role="Responsibles" EntitySet="Responsibles" />
                 </AssociationSet>
+                <FunctionImport Name="onRandom" EntitySet="Categories" m:HttpMethod="GET"></FunctionImport>
             </EntityContainer>
+            
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

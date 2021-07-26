@@ -76,6 +76,27 @@ sap.ui.define(['sap/ui/core/util/MockServer'], function(MockServer) {
                     }
                 });
             }
+
+            aRequests.push({
+				method: "GET",
+				path: new RegExp("onRandom(.*)"),
+				response: function (oXhr, sUrlParams) {
+					var getRandomInt = function getRandomInt(max) {
+						return Math.floor(Math.random() * Math.floor(max));
+					};
+					jQuery.sap.log.debug("Incoming request for toActiveStatus");
+
+					if (getRandomInt(2) === 1){
+						oXhr.respondJSON(200, {}, JSON.stringify({d: {StatusID: 2}}));	
+					}else{
+						oXhr.respondJSON(400, {});
+					}
+					return true;
+				}
+			});
+
+			oMockServer.setRequests(aRequests);
+
             oMockServer.start();
 
             jQuery.sap.log.info('Running the app with mock data');
