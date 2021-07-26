@@ -96,7 +96,7 @@
                 </Collection>
             </Annotation>
 
-            <Annotations Target="NorthwindModel.Category">        
+            <Annotations Target="NorthwindModel.Category">      
                 <Annotation Term="UI.HeaderInfo" >
                     <Record Type="UI.HeaderInfoType">
                         <PropertyValue Property="TypeName" String="{@i18n>category}"/>
@@ -117,7 +117,7 @@
                 <Annotation Term="UI.DataPoint" Qualifier="StatusQty">
                     <Record Type="UI.DataPointType">
                         <PropertyValue Property="Value" Path="Statuses/StatusName"/>
-                        <PropertyValue Property="Title" String="{@i18n>status:}"/>
+                        <PropertyValue Property="Title" String="{@i18n>status}"/>
                         <Annotation Term="Common.Label" String="{@i18n>status}"/>
                     </Record>
                 </Annotation>
@@ -134,6 +134,7 @@
             </Annotations>
 
             <Annotations Target="NorthwindModel.Category">
+
                 <Annotation Term="UI.DataPoint" Qualifier="AvailabilityQty">
                     <Record Type="UI.DataPointType">
                         <PropertyValue Property="Value" Path="ProductAvailability"/>
@@ -196,9 +197,49 @@
                         </Record>
                     </Collection>
                 </Annotation>
-
+                
+                <Annotation Term="UI.FieldGroup" Qualifier="Information">
+					<Record Type="UI.FieldGroupType">
+						<PropertyValue Property="Label" String="{@i18n>infoFacet}"/>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="UI.DataField">
+									<PropertyValue Property="Value" Path="ProductAvailability"/>
+									<PropertyValue Property="Label" String="{@i18n>productsAvailability}"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Target" AnnotationPath="Products/@UI.LineItem"/>
+							<PropertyValue Property="Label" String="{@i18n>productsList}"/>
+						</Record>
+						<Record Type="UI.ReferenceFacet">
+							<PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Information"/>
+							<PropertyValue Property="Label" String="{@i18n>information}"/>
+						</Record>
+					</Collection>
+				</Annotation>
             </Annotations>
-            
+
+            <Annotations Target="NorthwindModel.Product">
+                <Annotation Term="UI.LineItem" >
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ProductName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UnitPrice"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UnitsOnOrder"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

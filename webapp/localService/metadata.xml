@@ -60,7 +60,7 @@
 
             <Association Name="FK_Products_Categories">
                 <End Role="Categories" Type="NorthwindModel.Category" Multiplicity="0..1" />
-                <End Role="Products" Type="NorthwindModel.Product" Multiplicity="1" />
+                <End Role="Products" Type="NorthwindModel.Product" Multiplicity="*" />
                 <ReferentialConstraint>
                     <Principal Role="Categories">
                         <PropertyRef Name="CategoryID" />
